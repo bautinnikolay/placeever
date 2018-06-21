@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize')
 
-const db = new Sequelize('plaveever', 'placeever', 'test', {
+const db = new Sequelize('placeever', 'placeever', 'test', {
   host: 'localhost',
   dialect: 'mysql',
+  logging: false,
   operatorsAliases: false,
 
   pool: {
@@ -14,3 +15,5 @@ const db = new Sequelize('plaveever', 'placeever', 'test', {
 });
 
 module.exports = {db}
+
+//ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
