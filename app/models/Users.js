@@ -9,10 +9,14 @@ const Users = db.define('Users', {
     autoIncrement: true
   },
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   email: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    validate: {
+      isEmail: true
+    }
   },
   place: {
     type: Sequelize.STRING
@@ -22,13 +26,6 @@ const Users = db.define('Users', {
     primaryKey: true
   }
 }, {
-  validate: {
-    nameNotNull() {
-      if (this.name === null || this.name.length === 0) {
-        throw new Error('User name is required!')
-      }
-    }
-  },
   timestamps: false
 });
 

@@ -9,22 +9,27 @@ const Posts = db.define('Posts', {
     autoIncrement: true
   },
   author_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   place: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   text: {
     type: Sequelize.STRING
   },
   rate: {
     type: Sequelize.BOOLEAN,
-    primaryKey: true
+    primaryKey: true,
+    allowNull: false
   },
-  is_news {
+  is_news: {
     type: Sequelize.BOOLEAN,
-    primaryKey: true
-  }
+    primaryKey: true,
+    defaultValue: false
+  },
+
 }, {
   timestamps: false
 })
