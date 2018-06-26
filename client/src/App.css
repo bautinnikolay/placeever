@@ -1,0 +1,22 @@
+.App-header {
+  background-color: #222;
+  height: 50px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  display: block;
+  float: left;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.user-bar {
+  float: right;
+  padding-top: 0.5em;
+}

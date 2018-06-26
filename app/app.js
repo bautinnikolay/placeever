@@ -40,7 +40,7 @@ app.get('/logout', logout, (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log('Server run on port 3000')
+  console.log('Server run on port 3001')
 })
 
 module.exports = {app}
